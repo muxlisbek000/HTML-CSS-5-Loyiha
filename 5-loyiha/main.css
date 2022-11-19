@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container{
+    width: 60%;
+    height: 70vh;
+    margin: 0 auto;
+    display: flex;
+}
+/* ----------Ung --------------- */
+.ung,.chap{
+    width: 50%;
+}
+.ung{
+    background-color: rgb(251, 213, 0);
+
+}
+.ung img{
+    width:100%;
+    height: 100%;
+}
+
+/* ---------Chap--------------- */
+.chap{
+    background-color: brown;
+}
+.chap h1 {
+    text-transform: uppercase;
+    font-weight: 200;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    margin-top: 70px;
+}
+.chap h1::after{
+    content: '';
+    width: 50%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+}
+
+.chap p{
+    font-size: 18px;
+    color: rgb(227, 228, 228);
+    line-height: 25px;
+    text-align: justify;
+    
+    margin:20px 30px;
+}
+
+li{
+    list-style-type: none;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+.chap li a{
+    display: inline-block;
+    padding: 10px 20px;
+    width: 150px;
+    border: 1px solid ;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+li::after{
+    content: '';
+    width: 1px;
+    height: 20px;
+    background-color: rgb(255, 253, 253);
+    position: absolute;
+}
+li:nth-child(3)::after{
+    content: '';
+    width: 0;
+}
+.icons{
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.icons a{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+
+@media (max-width:920px) {
+    .container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .ung {
+        width: 100%;
+        height: 100vh;
+    }
+    .chap {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .chap h1{
+        margin-top: 180px ;
+    }
+    .chap p{
+        margin: 60px 50px;
+    }
+    .chap ul{
+        margin: 100px 0;
+    }
+}
